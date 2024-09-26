@@ -1,3 +1,13 @@
+## repo specific
+main.aux
+main.bbl
+main.blg
+main.lof
+main.log
+main.lot
+main.out
+main.toc
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
