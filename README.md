@@ -1,5 +1,8 @@
 # UOA Physics HEP thesis template
 *Adapted by Shanette De La Motte from Ryan Bignell template*
+
+Compile using `run_main.sh`, which compiles in LuaLatex for TikZ Feynman, as well as bibtex. There's also a makefile if you want to use that.
+
 Thesis template based on the hepthesis class on CTAN, with University of Adelaide logo, with School of Physics Chemistry and Earth Sciences specified, and School of Science Engineering and Technology specified
 
 https://ctan.org/pkg/hepthesis?lang=en
