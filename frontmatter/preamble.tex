@@ -1,0 +1,89 @@
+%%Use this file for package inclusion or defined commands
+%\usepackage{float}             %for using [H] option in figures to fix position
+\usepackage{placeins}
+\usepackage{changepage}
+\usepackage{graphicx}          %for importing pictures
+\usepackage{slashed}           %for Feynman slash notation
+\usepackage{braket}            %for bra-ket notation
+\usepackage{color}             %for \textcolor
+\usepackage{cite}              %To get [3-5] instead of [3,4,5]
+\usepackage{hepunits}          %Consistent units
+\usepackage{amssymb}           %For upharpoonleft, etc
+\usepackage{dsfont}            %For double line 1
+\usepackage{simplewick}        %For wick contractions
+\usepackage{subcaption}        %Subfigures
+\usepackage{adjustbox}         %For making the chiEFT coeffs table fit better
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{tikz-feynman}
+\usepackage{lineno}
+\usepackage[utf8]{inputenc}    %For nice characters in a couple of references
+\linenumbers
+\definecolor{tab10Green}{rgb}{0.1726,0.6275,0.1726}
+\definecolor{tab10Red}{rgb}{0.8392,0.1530,0.1569}
+\definecolor{tab10Blue}{rgb}{0.1216,0.4667,0.7059}
+\DeclareSIUnit\barn{b}
+\usetikzlibrary{arrows.meta,bending,positioning}
+%%Doc-Specific PDF metadata
+\setcounter{secnumdepth}{4}% for subsubsection numbering 
+\usepackage[%
+        pdfusetitle,
+        pdfsubject={PhD thesis},
+        pdfkeywords={YOUR FAVE KEYWORDS,HEP,particle,Belle II,Physics,thesis},
+        colorlinks=true,         %color the links, not boxes
+        citecolor=tab10Green,    %Change colors of citations
+        linkcolor=black,         %All internal links. contents page, etc %Eqn/fig set in main.tex hypersetup
+        %filecolor=blue,         %Unsure
+        %anchorcolor=green,      %Unsure
+        %menucolor=red,          %Unsure
+        urlcolor=tab10Blue,      %Color of URLs in bib
+        backref=section]{hyperref}
+
+%Making the square brackets on a cite also the citecolor (manually). Does not make them hyperlinks
+%\renewcommand{\citeleft}{\textcolor{tab10Green}{[}}
+%\renewcommand{\citeright}{\textcolor{tab10Green}{]}}
+
+%For Drafting purposes
+\newcommand{\tcr}[1]{\textcolor{magenta}{#1}}
+%Bracketing commands
+\newcommand{\rb}[1]{\left(#1\right)}
+\DeclareRobustCommand{\sq}[1]{\left[#1\right]}
+%one sided round brackets
+\newcommand{\bre}[1]{\left(#1\right.}
+\newcommand{\ebr}[1]{\left.#1\right)}
+%No sided brackets
+\newcommand{\eeb}[1]{\left.#1\right.}
+%One sided square brackets
+\newcommand{\sqe}[1]{\left[#1\right.}
+\newcommand{\esq}[1]{\left.#1\right]}
+\newcommand{\acom}[2]{\left\{#1,\,#2\right\}}
+
+
+\DeclareRobustCommand{\eqnr}[1]{Eq.~$\left(\ref{#1}\right)$}
+\newcommand{\eqnrtwo}[2]{Eqs.~$\rb{\ref{#1}}$ and $\rb{\ref{#2}}$}
+\newcommand{\eqnrthree}[3]{Eqs.~$\rb{\ref{#1}}$,$\rb{\ref{#2}}$ and $\rb{\ref{#3}}$}
+\newcommand{\Fig}[1]{Figure \ref{#1}}
+\newcommand{\Tab}[1]{Table \ref{#1}}
+\newcommand{\Sec}[1]{Section \ref{#1}}
+\newcommand{\Figtwo}[2]{Figures \ref{#1} and \ref{#2}}
+\newcommand{\Figthree}[3]{Figures \ref{#1}, \ref{#2} and \ref{#3}}
+\newcommand{\Chap}[1]{Chapter \ref{#1}}
+\newcommand{\Chaptwo}[2]{Chapters \ref{#1} and \ref{#2}}
+\newcommand{\App}[1]{Appendix \ref{#1}}
+
+\newcommand{\Refl}[1]{Ref.~\cite{#1}}    %Might need to make more often than usual
+\newcommand{\Refltwo}[2]{Refs.~\cite{#1} and \cite{#2}}    %Might need to make more often than usual
+
+
+%Commands which are in physics.sty which I won't be using cause it screws up compiler error checking
+\DeclareRobustCommand{\order}[1]{\mathcal{O}\left(#1\right)}
+%absolute value
+\DeclareRobustCommand{\abs}[1]{\left\lvert #1 \right\rvert }
+
+% Easily switch  between arrow notation (standard) and bold (uncommented) notation for 3-vectors
+%\let\oldvec\vec
+%\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+% Belle II def aliases
+\input{frontmatter/belle2_sym.tex}

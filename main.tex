@@ -1,0 +1,48 @@
+\documentclass[twoside,bind,paper=a4,ams,booktabs]{hepthesis}
+%\documentclass[twoside,bind,draft,paper=a4,ams,booktabs]{hepthesis}
+
+
+%% Load special font packages
+%\usepackage{mathpazo}    %palotino?   %Screws up Gauge link variables U appearance slightly
+
+%%Package includes, custom commands in preamble
+\input{frontmatter/preamble}
+%%Thesis title and author
+\title{It's a title!}
+\author{Your Name}
+%%Start the document
+\begin{document}
+
+\titlepage[Supervisor1]{Supervisor2}
+
+%un-numbered front matter (cover pages, table of contents, etc)
+\begin{frontmatter}
+  %\include{frontmatter/frontmatter}
+  \input{frontmatter/frontmatter}
+\end{frontmatter}
+
+%Have to do it here cause same variable effects contents page
+%and captions fuck stuff up
+\raggedbottom
+\hypersetup{linkcolor=tab10Red}    %Setting eqns, figs, etc to red
+
+%% Content body of the thesis
+\begin{mainmatter}
+  \input{Intro/Intro}
+  \input{Chapter2/Chapter2}
+  %%etc
+\end{mainmatter}
+
+%%Appendices
+\begin{appendices}
+  \input{appendices/appendix1}
+  %%etc
+\end{appendices}
+
+
+%%Un-numbered back matter (bibliography, etc)
+\begin{backmatter}
+  \input{backmatter/backmatter}
+\end{backmatter}
+
+\end{document}
