@@ -1,6 +1,6 @@
-# SADLM THESIS
-
-Thesis template based on the hepthesis class on CTAN
+# UOA Physics HEP thesis template
+*Adapted by Shanette De La Motte from Ryan Bignell template*
+Thesis template based on the hepthesis class on CTAN, with University of Adelaide logo, with School of Physics Chemistry and Earth Sciences specified, and School of Science Engineering and Technology specified
 
 https://ctan.org/pkg/hepthesis?lang=en
 
